@@ -105,7 +105,9 @@ xnoremap <C-A> <C-C>ggVG
 
 " CTRL-F is the search dialog
 inoremap <C-F> <Esc>/
-cnoremap <C-F> <nop>
+cnoremap <C-F> <CR>n
+nnoremap <C-F> n
+nnoremap <Esc> i
 
 " restore 'cpoptions'
 set cpo&
@@ -118,7 +120,7 @@ endif
 :vmap <Tab> >
 :vmap <S-Tab> <
 
-" " Automatically go to search results
+" Automatically go to search results
 " :set incsearch
 
 " Ctrl+w to quit
@@ -126,8 +128,6 @@ inoremap <C-w> <ESC>:q!<CR>
 cnoremap <C-w> <ESC>:q!<CR>
 noremap <C-w> <ESC>:q!<CR>
 
-" Enter should next in search
-cnoremap <CR> <CR>n/<Up>
 cnoremap <Esc> <Esc>i
 
 " Close search when scrolling
