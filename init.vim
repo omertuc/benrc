@@ -133,3 +133,4 @@ cnoremap <Esc> <Esc>i
 cnoremap <ScrollWheelUp> <ESC>i
 cnoremap <ScrollWheelDown> <ESC>i
 
+cmap <LeftMouse> <Esc><LeftMouse>
