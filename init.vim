@@ -104,15 +104,8 @@ snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
 " CTRL-F is the search dialog
-noremap  <expr> <C-F> has("gui_running") ? ":promptfind\<CR>" : "/"
-inoremap <expr> <C-F> has("gui_running") ? "\<C-\>\<C-O>:promptfind\<CR>" : "\<C-\>\<C-O>/"
-cnoremap <expr> <C-F> has("gui_running") ? "\<C-\>\<C-C>:promptfind\<CR>" : "\<C-\>\<C-O>/"
-
-" CTRL-H is the replace dialog,
-" but in console, it might be backspace, so don't map it there
-nnoremap <expr> <C-H> has("gui_running") ? ":promptrepl\<CR>" : "\<C-H>"
-inoremap <expr> <C-H> has("gui_running") ? "\<C-\>\<C-O>:promptrepl\<CR>" : "\<C-H>"
-cnoremap <expr> <C-H> has("gui_running") ? "\<C-\>\<C-C>:promptrepl\<CR>" : "\<C-H>"
+inoremap <C-F> <Esc>/
+cnoremap <C-F> <nop>
 
 " restore 'cpoptions'
 set cpo&
@@ -125,21 +118,16 @@ endif
 :vmap <Tab> >
 :vmap <S-Tab> <
 
-" Automatically go to search results
-:set incsearch
+" " Automatically go to search results
+" :set incsearch
 
-inoremap <C-W> <ESC>:q<CR>
+" Ctrl+w to quit
+inoremap <C-W> <ESC>:q!<CR>
 
 " Enter should next in search
-" cnoremap <CR> <C-R>=Next()<CR>
-" function! Next()
-"     let cmdtype = getcmdtype()
-"     if cmdtype == '/' || cmdtype == '?'
-"         n
-"     else
-"         <CR>
-"     endif
-" endfunction
+cnoremap <CR> <CR>n/<Up>
+cnoremap <Esc> <Esc>i
 
+" Close search when scrolling
 cnoremap <ScrollWheelUp> <ESC>
 cnoremap <ScrollWheelDown> <ESC>
