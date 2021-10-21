@@ -122,7 +122,9 @@ endif
 " :set incsearch
 
 " Ctrl+w to quit
-inoremap <C-W> <ESC>:q!<CR>
+inoremap <C-w> <ESC>:q!<CR>
+cnoremap <C-w> <ESC>:q!<CR>
+noremap <C-w> <ESC>:q!<CR>
 
 " Enter should next in search
 cnoremap <CR> <CR>n/<Up>
