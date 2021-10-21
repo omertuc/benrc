@@ -104,7 +104,7 @@ snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
 " CTRL-W is Close
-inoremap <C-w> :q
+inoremap <C-w> <ESC>
 
 " CTRL-Tab is Next window
 noremap <C-Tab> <C-W>w
@@ -140,5 +140,8 @@ endif
 :vmap <Tab> >
 :vmap <S-Tab> <
 
-inoremap <esc> <nop>
+" Automatically go to search results
+:set incsearch
 
+cnoremap <ScrollWheelUp> <ESC>
+cnoremap <ScrollWheelDown> <ESC>
