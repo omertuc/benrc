@@ -131,6 +131,6 @@ cnoremap <CR> <CR>n/<Up>
 cnoremap <Esc> <Esc>i
 
 " Close search when scrolling
-cnoremap <ScrollWheelUp> <ESC>/fkubbbbbbbbbb<CR>:<ESC>
-cnoremap <ScrollWheelDown> <ESC>/fkubbbbbbbbb<CR>:<ESC>
+cnoremap <ScrollWheelUp> <ESC>i
+cnoremap <ScrollWheelDown> <ESC>i
 
