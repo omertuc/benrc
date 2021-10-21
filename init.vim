@@ -103,21 +103,6 @@ onoremap <C-A> <C-C>gggH<C-O>G
 snoremap <C-A> <C-C>gggH<C-O>G
 xnoremap <C-A> <C-C>ggVG
 
-" CTRL-W is Close
-inoremap <C-w> <ESC>
-
-" CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
-
-" CTRL-F4 is Close window
-noremap <C-F4> <C-W>c
-inoremap <C-F4> <C-O><C-W>c
-cnoremap <C-F4> <C-C><C-W>c
-onoremap <C-F4> <C-C><C-W>c
-
 " CTRL-F is the search dialog
 noremap  <expr> <C-F> has("gui_running") ? ":promptfind\<CR>" : "/"
 inoremap <expr> <C-F> has("gui_running") ? "\<C-\>\<C-O>:promptfind\<CR>" : "\<C-\>\<C-O>/"
@@ -142,6 +127,19 @@ endif
 
 " Automatically go to search results
 :set incsearch
+
+inoremap <C-W> <ESC>:q<CR>
+
+" Enter should next in search
+" cnoremap <CR> <C-R>=Next()<CR>
+" function! Next()
+"     let cmdtype = getcmdtype()
+"     if cmdtype == '/' || cmdtype == '?'
+"         n
+"     else
+"         <CR>
+"     endif
+" endfunction
 
 cnoremap <ScrollWheelUp> <ESC>
 cnoremap <ScrollWheelDown> <ESC>
