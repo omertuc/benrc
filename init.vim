@@ -105,9 +105,8 @@ xnoremap <C-A> <C-C>ggVG
 
 " CTRL-F is the search dialog
 inoremap <C-F> <Esc>/
-cnoremap <C-F> <CR>n
-nnoremap <C-F> n
-nnoremap <Esc> i
+cnoremap <C-F> <CR>/<Up>
+cnoremap <CR> <Esc>i
 
 " restore 'cpoptions'
 set cpo&
