@@ -122,10 +122,13 @@ endif
 " Automatically go to search results
 " :set incsearch
 
-" Ctrl+w to quit
+" Ctrl+w or Ctrl+q to quit
 inoremap <C-w> <ESC>:q!<CR>
 cnoremap <C-w> <ESC>:q!<CR>
 noremap <C-w> <ESC>:q!<CR>
+inoremap <C-q> <ESC>:q!<CR>
+cnoremap <C-q> <ESC>:q!<CR>
+noremap <C-q> <ESC>:q!<CR>
 
 cnoremap <Esc> <Esc>i
 
