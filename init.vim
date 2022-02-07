@@ -139,3 +139,5 @@ cnoremap <ScrollWheelDown> <ESC>i
 cmap <LeftMouse> <Esc><LeftMouse>
 
 set nomagic
+
+set undofile
